@@ -1,85 +1,66 @@
 <?php
 
-/* -------- Loops & Iteration ------- */
+//for loop
 
-/* ------------ For Loop ------------ */
+// for($x=0;$x<=10;++$x)
+// {
+//   // echo $x;
+//   echo 'Number '.$x.'<br>';
+// }
 
-/*
-** For Loop Syntax
-  for (initialize; condition; increment) {
-  // code to be executed
-  }
-*/
 
-for ($x = 0; $x <= 10; $x++) {
-  echo "Number: $x <br>";
-}
 
-/* ------------ While Loop ------------ */
+//while
 
-/*
-** While Loop Syntax
-  while (condition) {
-  // code to be executed
-  }
-*/
+// $a=1;
+// while($a<=15)
+// {
+//   echo 'Number'.$a.'<br>';
+//   $a=$a+1;
+// }
 
-$x = 1;
 
-while ($x <= 5) {
-  echo "Number: $x <br>";
-  $x++;
-}
+//Do while loop
 
-/* ---------- Do While Loop --------- */
+// $x=1;
+// do{
+//   echo 'Number->'.$x.'<br>';
+//   $x=$x+1;
+// }
+// while($x<=10);
 
-/*
-** Do While Loop Syntax
-  do {
-  // code to be executed
-  } while (condition);
-do...while loop will always execute the block of code once, even if the condition is false.
-*/
 
-do {
-  echo "Number: $x <br>";
-  $x++;
-} while ($x <= 5);
 
-/* ---------- Foreach Loop ---------- */
+$post=['first','second','third'];
+// for($i=0;$i<count($post);$i++)
+// {
+//    echo $post[$i].'<br>';
+// }
 
-/*
-** Foreach Loop Syntax
-  foreach ($array as $value) {
-  // code to be executed
-  }
-*/
 
-// Loop through an array
+//For each 
 
-$numbers = [1, 2, 3, 4, 5];
+// foreach($post as $posts)
+// {
+//   echo $posts.'<br>';
+// }
 
-foreach ($numbers as $x) {
-  echo "Number: $x <br>";
-}
+//getting index
+// foreach($post as $index => $posts)
+// {
+//   echo $index.'->'.$posts.'<br>';
+// }
 
-// Use the indexes within the loop
 
-$posts = ['Post One', 'Post Two', 'Post Three'];
-
-foreach ($posts as $index => $post) {
-  echo "${index} - ${post} <br>";
-}
-
-// Use the keys within the loop for an associative array
-
-$person = [
-  'first_name' => 'Brad',
-  'last_name' => 'Traversy',
-  'email' => 'brad@gmail.com',
+$person=[
+  'first name'=>'james',
+  'last name'=>'bond',
+  'age'=>'40',
+  'city'=>'London',
+  'email'=>'james121@gmail.com',
 ];
 
-// Get Keys
-foreach ($person as $key => $val) {
-  echo "${key} - ${val} <br>";
+foreach($person as $key => $value)
+{
+  echo $key.'-'.$value.'<br>';
 }
